@@ -4,6 +4,7 @@
 #include <string>
 #include <vector>
 
+// Define different attack types
 class AttackType {
     PHISHING,
     MALWARE,
