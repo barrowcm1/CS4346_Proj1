@@ -1,3 +1,6 @@
+#ifdef RULES_H
+#define RULES_H
+
 #include <string>
 #include <vector>
 
