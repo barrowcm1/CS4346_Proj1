@@ -12,3 +12,5 @@ class AttackType {
     MAN_IN_THE_MIDDLE,
     BRUTE_FORCE
 };
+
+#endif
