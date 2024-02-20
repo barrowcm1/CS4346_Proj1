@@ -5,7 +5,7 @@
 #include <unordered_map>
 using namespace std;
 
-class Knowledge_engine{
+class Knowledge_base{
     public:
 
         // The possible attacks that can occur in the program
