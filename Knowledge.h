@@ -9,16 +9,16 @@ class Knowledge_engine{
     public:
 
         // The possible attacks that can occur in the program
-        vector<string>conclusions = {"Cyber Attack", "Malware attack", "Phishing", "Cyber Attack", "Denial of Service Attack", "Brute Force"};
+        vector<string>conclusions = {"Cyber Attack", "Malware attack", "Phishing Attack", "Man-in-the-Middle Attack", "Denial of Service Attack", "Brute Force Attack"};
 
         // Variables that contains troubleshooting questions
-        vector<string>variables = {"Computer slow", "Suspucious Email Requests", "Unsolicited Requests", "Urgent Action Demands",
+        vector<string>variables = {"Computer Slow", "Suspucious Email Requests", "Unsolicited Requests", "Urgent Action Demands",
         "Compromised Email", "Redirected Internet", "IP Address Modified", "Unable to Login", "Suspicious Traffic", "Flood of Traffic", 
-        "inability to Retrieve Sensor Data", "Computer Won't Sshutdown", "Repeated Error Messages", "Computer Freezing", "Crashes", "Diminishing Storage",
+        "Inability to Retrieve Sensor Data", "Computer Won't Shutdown", "Repeated Error Messages", "Computer Freezing", "Crashes", "Diminishing Storage",
         "Strange Emails", "Redirecting Internet Searches", "Browser Redirect", "Inappropriate ADS", "Demanding Ransom"};
 
 
-        // Combinations that will lwad to solution of a(n) attack
+        // Combinations that will lead to a solution of a(n) attack
         vector<vector<int>>troubleshoot_combinations = {
             {0,4,7}, {0,4,10}, {0,4,11}, {0,1,10}, {0,1,11}, //CyberAttack
             {0,4,12}, {0,7,13}, {0,7,14}, {0,7,15}, {0,7,16}, // Malware
@@ -41,10 +41,11 @@ class Knowledge_engine{
                                                        man_in_the_middle_clause, brute_force_clause};
         
 
-        // function declarations
+        // Function declarations
         map<string, int> variable_initialized = initialized_variable_list(variables);
         vector<int> clause_variable_list = initialized_clause_list(20, clause_index);
 
+        // Initializing the variable list
         map<string, int> initialized_variable_list(std::vector<std::string> variable_list) 
         {
             map<string, int> initialized;
@@ -58,6 +59,7 @@ class Knowledge_engine{
             return initialized;
         }
 
+        // Initializing the clause list
         vector<int> initialized_clause_list(int numRules, vector<vector<int>>clause_index) 
         {
             vector<int>clause_variable_list(numRules * clause_index.size());
