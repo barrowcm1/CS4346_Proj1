@@ -10,4 +10,5 @@ algorithm is used to display the recommended solutions needed to solve and fix a
 To run the program from the command line simply enter the following comands:
 
 g++ -std=c++17 Demo.cpp 
+
 ./a.out
